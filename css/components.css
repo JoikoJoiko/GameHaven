@@ -1,0 +1,185 @@
+:root {
+  --pink-main: #f6a5d7;
+  --pink-glow: #ee55d9;
+  --white: rgba(255, 255, 255, 0.342);
+  --blur-bg: rgba(255, 255, 255, 0.267);
+  --header-height: 70px;
+}
+
+/* === ШАПКА === */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  backdrop-filter: blur(10px);
+  background: var(--blur-bg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.site-header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+/* === ЛОГО === */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.logo-text {
+  color: #fff;
+  font-family: 'Jersey', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.1;
+  text-shadow: none;
+}
+
+/* === МЕНЮ === */
+.main-nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Italiana', serif;
+  font-size: 1.8rem;
+  text-shadow: 0 0 6px var(--pink-glow); /* только у пунктов */
+  transition: all 0.2s ease;
+}
+
+.main-nav a:hover {
+  text-shadow: 0 0 10px var(--pink-glow), 0 0 5px white;
+}
+
+/* === ИКОНКИ === */
+.icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.4));
+  pointer-events: none; 
+}
+
+/* === ПРАВАЯ ЧАСТЬ === */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: var(--pink-main);
+  color: white;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 16px;
+  text-align: center;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+/* === ВЫПАДАЮЩЕЕ МЕНЮ === */
+.dropdown-menu {
+  position: absolute;
+  top: var(--header-height);
+  right: 0;
+  background: var(--blur-bg);
+  backdrop-filter: blur(10px);
+  border: none;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  padding: 15px 20px; /* добавили боковые отступы */
+  width: max-content;
+  min-width: 200px;
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  z-index: 900;
+}
+
+.dropdown-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Контент */
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.dropdown-menu a {
+  white-space: nowrap;
+  display: block;
+  text-align: center;
+  padding: 10px 30px; /* добавлен боковой внутренний отступ */
+  background: var(--pink-main);
+  color: #fff;
+  font-family: 'JetBrainsMono', monospace;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.15s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+}
+
+.dropdown-menu a:hover {
+  background: var(--pink-glow);
+  box-shadow: 0 0 10px var(--pink-glow);
+}
+
+
+/* === АДАПТИВ === */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    right: 0;
+    left: auto;
+    min-width: 200px;
+  }
+  
+  .main-nav {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  #main-links {
+    display: none;
+  }
+}
+

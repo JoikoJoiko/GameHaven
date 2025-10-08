@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Italiana';
+  src: url('../assets/fonts/Italiana-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jersey';
+  src: url('../assets/fonts/Jersey15-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('../assets/fonts/JetBrainsMono.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('../assets/fonts/JetBrainsMono-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('/assets/img/background.jpg');
+  background-size: 100%;
+  min-height: 100vh;
+}
