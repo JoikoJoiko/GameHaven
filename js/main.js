@@ -15,3 +15,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   loadFooter();
 });
+
+
+
+
+
+
+

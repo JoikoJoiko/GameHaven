@@ -5,19 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Game Haven</title>
   <link rel="icon" type="image/png" href="./assets/icons/logo.png" />
-  <link rel="stylesheet" href="./css/base.css" />
-  <link rel="stylesheet" href="./css/components.css" />
+
+  <!-- Шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jersey+10&family=JetBrains+Mono:ital,wght@1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/pages/index.css" />
 </head>
 <body>
   <div id="header"></div>
 
-  <main>
-    <h1 style="text-align:center;margin-top:120px;color:#ff69b4;">
-      Welcome to Game Haven
-    </h1>
+  <main class="scroll-container">
+    <section class="hero">
+      <div class="hero__content">
+        <h2 class="hero__subtitle">Welcome to the</h2>
+        <h1 class="hero__title">GAME HAVEN</h1>
+        <p class="hero__tagline">
+          <span class="play">Play.</span>
+          <span class="connect">Connect.</span>
+          <span class="repeat">Repeat.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="next-section">
+      <h2>Next Section</h2>
+    </section>
+
+    <section class="next-section">
+      <h2>Another Section</h2>
+    </section>
   </main>
 
-  <script type="module" src="./js/main.js"></script>
   <div id="footer"></div>
+
+  <script type="module" src="./js/main.js"></script>
 </body>
+
 </html>
