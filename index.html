@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Game Haven</title>
   <link rel="icon" type="image/png" href="./assets/icons/logo.png" />
 
-  <!-- Шрифты -->
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jersey+10&family=JetBrains+Mono:ital,wght@1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Italiana&family=Jersey+10&family=JetBrains+Mono:ital,wght@1,400&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="../css/base.css" />
   <link rel="stylesheet" href="../css/components.css" />
   <link rel="stylesheet" href="../css/pages/index.css" />
 </head>
+
 <body>
   <div id="header"></div>
 
   <main class="scroll-container">
     <section class="hero">
+      <div class="hero__overlay"></div>
       <div class="hero__content">
         <h2 class="hero__subtitle">Welcome to the</h2>
         <h1 class="hero__title">GAME HAVEN</h1>
@@ -27,15 +31,81 @@
           <span class="repeat">Repeat.</span>
         </p>
       </div>
+      </div>
     </section>
 
-    <section class="next-section">
-      <h2>Next Section</h2>
+    <section id="about" class="about-block">
+      <div class="about-block__inner">
+        <header class="about-block__header">
+          <h2 class="about-title">About Game Haven</h2>
+          <p class="about-desc">
+            Game Haven is a cozy place where people come together to play the best board games.
+            Whether you’re a student, a family, or a hardcore fan, you’ll find your spot here.
+          </p>
+        </header>
+        <div class="about-features">
+          <div class="about-feature">
+            <img src="./assets/img/feature-games.jpg" alt="Wide choice of games" class="about-feature__img" />
+            <p class="about-feature__label">
+              Wide<br>choice of<br>games
+            </p>
+          </div>
+          <div class="about-feature">
+            <img src="./assets/img/feature-friends.jpg" alt="Friendly atmosphere" class="about-feature__img" />
+            <p class="about-feature__label">
+              Friendly<br>atmosphere
+            </p>
+          </div>
+          <div class="about-feature">
+            <img src="./assets/img/feature-events.jpg" alt="Weekly events" class="about-feature__img" />
+            <p class="about-feature__label">
+              Weekly<br>events
+            </p>
+          </div>
+        </div>
+        <div class="about-divider">
+          <span class="dot dot--blue"></span>
+          <span class="dot dot--blue"></span>
+          <span class="dot dot--blue"></span>
+          <span class="dot dot--blue"></span>
+          <span class="dot dot--blue"></span>
+          <span class="dot dot--blue"></span>
+
+          <span class="dot dot--pink"></span>
+          <span class="dot dot--pink"></span>
+          <span class="dot dot--pink"></span>
+          <span class="dot dot--pink"></span>
+          <span class="dot dot--pink"></span>
+          <span class="dot dot--pink"></span>
+
+          <span class="dot dot--orange"></span>
+          <span class="dot dot--orange"></span>
+          <span class="dot dot--orange"></span>
+          <span class="dot dot--orange"></span>
+          <span class="dot dot--orange"></span>
+          <span class="dot dot--orange"></span>
+        </div>
+        <div id="events" class="about-location">
+          <div class="about-location__text">
+            <h3 class="location-title">Event address</h3>
+            <p class="location-line">
+              Board Street 15, City
+            </p>
+            <p class="location-line">
+              Opening hours: 10:00–23:00
+            </p>
+            <p class="location-note">
+              <em>Waiting for you!</em>
+            </p>
+          </div>
+          <div class="about-location__map">
+            <img src="./assets/img/map-preview.jpg" alt="Location map preview" class="about-location__img" />
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="next-section">
-      <h2>Another Section</h2>
-    </section>
+
   </main>
 
   <div id="footer"></div>
